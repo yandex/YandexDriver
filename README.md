@@ -13,14 +13,15 @@ Binaries are available under [the releases tab](https://github.com/yandex/Yandex
 2. Example code for python on Windows
 ```python
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+service = Service(executable_path=r"/path/to/yandexdriver.exe") # Path to the Yandex Driver
+
 options = webdriver.ChromeOptions()
 
-binary_yandex_driver_file = 'yandexdriver.exe' # path to YandexDriver
-
-driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
-driver.get('https://yandex.ru')
+driver = webdriver.Chrome(service=service, options=options)
+driver.get("https://yandex.ru")
 driver.quit()
-    
 ```
 
 
@@ -41,6 +42,5 @@ options.add_experimental_option('androidPackage', yandex_browser_package_name)
 driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
 driver.get('https://yandex.ru')
 driver.quit()
-    
 ```
   
