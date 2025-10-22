@@ -9,7 +9,7 @@ YandexDriver is a WebDriver implementation derived from [ChromeDriver](https://d
 Binaries are available under [the releases tab](https://github.com/yandex/YandexDriver/releases).
 
 ## Desktop usage
-1. Download binary file for your platform.
+1. Download binary file for your platform. The major version must match. For example, 25.8.0 is suitable for all browsers of version 25.8.x.
 2. Example code for python on Windows
 ```python
 from selenium import webdriver
@@ -26,7 +26,7 @@ driver.quit()
 
 
 ## Android usage
-1. Download binary file for host.
+1. Download binary file for host. The major version must match. For example, 25.8.0 is suitable for all browsers of version 25.8.x.
 2. Attach android device with Yandex.Browser to host. Check by running adb devices.
 3. Enable USB Web-pages debugging in Settings in Yandex.Browser.
 4. Example code for python on Windows host
@@ -44,3 +44,4 @@ driver.quit()
     
 ```
   
+
